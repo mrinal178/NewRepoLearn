@@ -1,8 +1,8 @@
 <suite name="AllTests">
     <test name="PracticeMavenTests">
         <classes>
-            <class name="your.package.UploadExcel"/>
-            <class name="your.package.Practiceautomation"/>
+            <class name="automationpractice.UploadExcel"/>
+            <class name="automationpractice.Practiceautomation"/>
         </classes>
     </test>
 </suite>
