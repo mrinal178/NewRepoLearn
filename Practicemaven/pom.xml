@@ -101,12 +101,10 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
          <configuration>
-       <configuration>
           <suiteXmlFiles>
             <!-- Path to your TestNG suite file -->
             <suiteXmlFile>src\test\resources\Testxml\JenkinsTest.xml</suiteXmlFile>
           </suiteXmlFiles>
-        </configuration>
       </configuration>
       </plugin>
     </plugins>
