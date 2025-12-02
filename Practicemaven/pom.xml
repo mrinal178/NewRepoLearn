@@ -97,16 +97,19 @@
 
       <!-- ✅ Added: Maven Surefire Plugin to run Testing.xml -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.1.2</version>
-         <configuration>
-          <suiteXmlFiles>
-            <!-- Path to your TestNG suite file -->
-            <suiteXmlFile>src\test\resources\Testxml\JenkinsTest.xml</suiteXmlFile>
-          </suiteXmlFiles>
-      </configuration>
-      </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.1.2</version>
+    <configuration>
+        <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/Testxml/JenkinsTest.xml</suiteXmlFile>
+        </suiteXmlFiles>
+        <!-- Optional: ensures only suite XML runs -->
+        <includes>
+            <include>**/NoSuchFile.java</include> <!-- effectively disables default scanning -->
+        </includes>
+    </configuration>
+</plugin>
     </plugins>
   </build>
 </project>
