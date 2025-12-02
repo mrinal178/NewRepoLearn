@@ -9,13 +9,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Practiceautomation {
 	public static WebDriver driver;
 	
-	public static void main(String[] args) {
+	@Test
+	public void openbrowser() {
 		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		
 	}
+		
+	
 	
 	
 }
